@@ -1,0 +1,57 @@
+
+:root{
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+    
+    --font: "Young Serif", sans-serif;
+    --font2: "Outfit", sans-serif;
+    --gap: 4rem;--gap-sm: calc(var(--gap) * 0.45);--gap-xsm:calc(var(--gap) * 0.25);
+    --radius:2rem;--radius-sm:calc(var(--radius) * 0.5);
+    --tran: all 0.25s ease;
+}
+/* Weights: 400, 600, 700 */
+img{display: block;width: 100%;border-radius: var(--radius-sm);}
+h1,h2,h3,h4,h5,h6{font-family: var(--font);}
+hr{border: none;height: 1px;background: var(--LightGrey);margin-top: var(--gap);}
+table{border-collapse: collapse;width: 100%;} table td{border-bottom: 1px solid var(--LightGrey);padding: var(--gap-xsm) var(--gap-sm);}table tr:last-child td{border: none;}
+ul,ol{padding-left: 0;} li{margin: var(--gap-sm);padding-left: var(--gap-sm);}
+ol > li::marker{font-weight: bold;color: var(--Nutmeg);}
+html{font-family: var(--font2); font-size: 62.5%;}
+body{font-size: 1.6rem;background-color: var(--Eggshell);display: flex;justify-content: center;align-items: center;margin: 0;padding: 0;line-height: 2.5rem;}
+.container{
+    width: 100%;
+    max-width:736px;
+    background-color: var(--White);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    margin: var(--gap);
+    color: var(--WengeBrown);
+    & main{padding:0;}
+    & h1{color: var(--DarkCharcoal);margin: var(--gap) auto;line-height: 1em;}
+    & h2{color:var(--Nutmeg);margin: var(--gap) auto;}
+    & table tr td:last-child{font-weight: bold;color: var(--Nutmeg);}
+}
+
+.rose{
+    background-color: var(--RoseWhite);
+    padding: var(--gap-sm);
+    border-radius: var(--radius-sm);
+    & h3{color: var(--DarkRaspberry);margin: 0;}
+}
+
+@media (max-width:375px) {
+    .container{
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        & main{padding:0 var(--gap) var(--gap);}
+        & img{border-radius: 0;}
+    }
+}
